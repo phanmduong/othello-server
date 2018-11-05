@@ -37,11 +37,19 @@ var emitEventToOtherClient = (command, socketId, payload) => {
 };
 
 function refreshRoom(room) {
-    return {
+    let roomResult = {
         ...room,
         board: new Array(RoomConstant.Board.ROW).fill(RoomConstant.Board.Cell.EMPTY).map(() => new Array(RoomConstant.Board.COL).fill(RoomConstant.Board.Cell.EMPTY)),
         status: RoomConstant.Status.EMPTY,
-    }
+    };
+
+    rooms = rooms.map((roomData) => {
+        if (roomData.id == room.id) {
+            return roomResult;
+        }
+        return roomData;
+    });
+    return roomResult;
 }
 
 module.exports = {

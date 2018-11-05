@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cec5e2fe-a7f3-46cf-a405-e4b76ba72e2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/othello.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/precache-manifest.96fac6892f39c575b83d3c8c5d0b84fd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/1.bd5be7a3.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/1.bd5be7a3.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/main.f9c3ac0a.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/main.f9c3ac0a.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/main.5355be0a.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/main.5355be0a.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/runtime~main.229c360f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/runtime~main.229c360f.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/constant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/othello.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/othello.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/othello.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/othello.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,15 +27,15 @@
           <entry key="babelrc" value="1" />
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="21" />
-          <entry key="json" value="2" />
+          <entry key="js" value="22" />
+          <entry key="json" value="3" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="21" />
+          <entry key="JSON" value="4" />
+          <entry key="JavaScript" value="22" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -64,14 +43,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="15" />
-          <entry key="js" value="1387" />
-          <entry key="json" value="41" />
+          <entry key="js" value="1506" />
+          <entry key="json" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="41" />
-          <entry key="JavaScript" value="1387" />
+          <entry key="JSON" value="73" />
+          <entry key="JavaScript" value="1506" />
           <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
@@ -94,10 +73,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/routes/index.js">
+        <entry file="file://$PROJECT_DIR$/dist/othello.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="205">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -117,6 +96,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -125,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/othello.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="182" selection-start-line="182" selection-end-line="182" />
+            <state relative-caret-position="515">
+              <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -139,29 +127,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
               <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2419">
-              <caret line="111" column="13" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/constant.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -187,13 +152,13 @@
         <option value="$PROJECT_DIR$/server/othello.js" />
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/dist/othello.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/dist/constant.js" />
         <option value="$PROJECT_DIR$/src/constant.js" />
-        <option value="$PROJECT_DIR$/src/othello.js" />
         <option value="$PROJECT_DIR$/src/routes/index.js" />
         <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/othello.js" />
       </list>
     </option>
   </component>
@@ -213,7 +178,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-2016" />
-    <option name="y" value="-186" />
+    <option name="y" value="-187" />
     <option name="width" value="1964" />
     <option name="height" value="1066" />
   </component>
@@ -235,48 +200,6 @@
               <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="othello-server" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static1" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static1" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="1.c8c30590.chunk.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
@@ -375,15 +298,15 @@
       <option name="presentableId" value="Default" />
       <updated>1541321393351</updated>
       <workItem from="1541321394622" duration="2452000" />
-      <workItem from="1541331041677" duration="22014000" />
+      <workItem from="1541331041677" duration="22547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24466000" />
+    <option name="totallyTimeSpent" value="24999000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2016" y="-186" width="1964" height="1066" extended-state="0" />
+    <frame x="-2016" y="-187" width="1964" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1127123" />
@@ -464,20 +387,6 @@
     <entry file="file://$PROJECT_DIR$/dist/helpers/utility.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/othello.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="253" column="17" selection-start-line="253" selection-start-column="17" selection-end-line="253" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/constant.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -489,13 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othello.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="182" selection-start-line="182" selection-end-line="182" />
         </state>
       </provider>
     </entry>
@@ -516,18 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!block;n#normalizePort#0" />
-            <element signature="n#!!block;n#onError#0" />
-            <element signature="n#!!block;n#onListening#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -544,6 +434,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!block;n#normalizePort#0" />
+            <element signature="n#!!block;n#onError#0" />
+            <element signature="n#!!block;n#onListening#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/othello.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othello.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
