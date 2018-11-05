@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cec5e2fe-a7f3-46cf-a405-e4b76ba72e2b" name="Default Changelist" comment="" />
+    <list default="true" id="cec5e2fe-a7f3-46cf-a405-e4b76ba72e2b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/asset-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/othello.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/precache-manifest.96fac6892f39c575b83d3c8c5d0b84fd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/service-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/1.bd5be7a3.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/1.bd5be7a3.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/main.f9c3ac0a.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/css/main.f9c3ac0a.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/main.5355be0a.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/main.5355be0a.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/runtime~main.229c360f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/public/static1/js/runtime~main.229c360f.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/constant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/othello.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/othello.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/routes/index.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,7 +47,8 @@
         <counts>
           <entry key="babelrc" value="1" />
           <entry key="env" value="1" />
-          <entry key="js" value="18" />
+          <entry key="gitignore" value="1" />
+          <entry key="js" value="21" />
           <entry key="json" value="2" />
           <entry key="ts" value="1" />
         </counts>
@@ -32,8 +56,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="18" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JavaScript" value="21" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -55,11 +79,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+            <state relative-caret-position="288">
+              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
               <folding>
                 <element signature="n#!!block;n#normalizePort#0" />
                 <element signature="n#!!block;n#onError#0" />
@@ -70,10 +94,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+        <entry file="file://$PROJECT_DIR$/dist/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="220">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -81,6 +105,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/static1/js/1.c8c30590.chunk.js">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -102,21 +144,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/dist/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="2419">
+              <caret line="111" column="13" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2464">
-              <caret line="112" column="13" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -128,20 +166,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/othello.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="253" column="17" selection-start-line="253" selection-start-column="17" selection-end-line="253" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -149,6 +173,9 @@
       <find>client</find>
       <find>store.</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -166,6 +193,7 @@
         <option value="$PROJECT_DIR$/src/othello.js" />
         <option value="$PROJECT_DIR$/src/routes/index.js" />
         <option value="$PROJECT_DIR$/src/app.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -189,6 +217,7 @@
     <option name="width" value="1964" />
     <option name="height" value="1066" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -217,12 +246,63 @@
               <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="othello-server" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static1" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static1" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="1.c8c30590.chunk.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="othello-server" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static1" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static1" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="1.c8c30590.chunk.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
@@ -249,6 +329,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/helpers" />
       <recent name="$PROJECT_DIR$" />
@@ -294,12 +375,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541321393351</updated>
       <workItem from="1541321394622" duration="2452000" />
-      <workItem from="1541331041677" duration="20719000" />
+      <workItem from="1541331041677" duration="22014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23171000" />
+    <option name="totallyTimeSpent" value="24466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2016" y="-186" width="1964" height="1066" extended-state="0" />
@@ -383,9 +464,6 @@
     <entry file="file://$PROJECT_DIR$/dist/helpers/utility.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/othello.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
@@ -397,13 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2464">
-          <caret line="112" column="13" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -428,20 +499,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static1/js/1.c8c30590.chunk.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static1/js/1.c8c30590.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        <state relative-caret-position="288">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding>
             <element signature="n#!!block;n#normalizePort#0" />
             <element signature="n#!!block;n#onError#0" />
@@ -449,6 +527,23 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2419">
+          <caret line="111" column="13" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

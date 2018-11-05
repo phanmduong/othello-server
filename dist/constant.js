@@ -24,15 +24,14 @@ module.exports = {
             COL: 8,
             Cell: {
                 EMPTY: null,
-                WHITE: 0,
-                BLACK: 1
+                WHITE: 1,
+                BLACK: 2
             }
         },
         Status: {
             EMPTY: 0,
             AVAILABLE: 1,
-            FULL: 2,
-            PLAYING: 3
+            PLAYING: 2
         }
     },
     Client: {

@@ -1,16 +1,6 @@
 'use strict';
 
-var _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-        for (var key in source) {
-            if (Object.prototype.hasOwnProperty.call(source, key)) {
-                target[key] = source[key];
-            }
-        }
-    }
-    return target;
-};
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _utility = require('./helpers/utility');
 
@@ -31,7 +21,8 @@ var rooms = new Array(100).fill(null).map(function (value, i) {
         board: new Array(RoomConstant.Board.ROW).fill(RoomConstant.Board.Cell.EMPTY).map(function () {
             return new Array(RoomConstant.Board.COL).fill(RoomConstant.Board.Cell.EMPTY);
         }),
-        status: RoomConstant.Status.EMPTY
+        status: RoomConstant.Status.EMPTY,
+        currentChessman: RoomConstant.Board.Cell.WHITE
     };
 
     var board = room.board;
@@ -91,13 +82,13 @@ module.exports = {
 
             // // neu 1 user bam join vao 1 room thi
             socket.on(ServerListener.JOIN_ROOM, function (data) {
+                if ((0, _utility.isEmpty)(socket.user)) return;
                 var roomId = data.roomId;
 
                 var room = rooms.filter(function (room) {
                     return room.id == roomId;
                 })[0];
                 var user = socket.user;
-                socket.room = room;
 
                 user.status = ClientConstant.Status.IN_ROOM;
 
@@ -106,113 +97,63 @@ module.exports = {
 
                     // mac dinh nguoi vao trc se la player white
                     room.playerWhite = user;
+                    user.chessman = RoomConstant.Board.Cell.WHITE;
                     room.status = RoomConstant.Status.AVAILABLE;
                 } else if (room.status == RoomConstant.Status.AVAILABLE) {
                     // truong hop dang co 1 user trong room
 
                     // nguoi vao sau se la player black
                     room.playerBlack = user;
-                    room.status = RoomConstant.Status.FULL;
-
-                    // // gui cho nguoi choi con lai cung room
-                    // emitEventToOtherClient(ClientListener.JOINED_ROOM,
-                    //     joinedRoom.playerWhite.socket, joinedRoom);
+                    user.chessman = RoomConstant.Board.Cell.BLACK;
+                    room.status = RoomConstant.Status.PLAYING;
                 }
 
-                io.emit(ClientListener.JOINED_ROOM, room);
+                socket.room = room;
+                socket.broadcast.emit(ClientListener.UPDATE_ROOM, room);
+                socket.emit(ClientListener.JOINED_ROOM, room);
 
-                // for (i in rooms) {
-                //     // xu li room khi nguoi dung bam vao
-                //     if (rooms[i].roomId == roomId) {
-                //         // luu instance room
-                //         joinedRoom = rooms[i];
-                //
-                //         // update status cua user
-                //
-                //
-                //         // them user vao room
-                //         if (joinedRoom.status == RoomConstant.Status.EMPTY) {
-                //             // truong hop dang co 0 user trong room
-                //
-                //             // mac dinh nguoi vao trc se la player white
-                //             joinedRoom.playerWhite = user;
-                //             joinedRoom.status = RoomConstant.Status.AVAILABLE;
-                //         } else if (joinedRoom.status == RoomConstant.Status.AVAILABLE) {
-                //             // truong hop dang co 1 user trong room
-                //
-                //             // nguoi vao sau se la player black
-                //             joinedRoom.playerBlack = user;
-                //             joinedRoom.status = RoomConstant.Status.FULL;
-                //
-                //             // gui cho nguoi choi con lai cung room
-                //             emitEventToOtherClient(ClientListener.JOINED_ROOM,
-                //                 joinedRoom.playerWhite.socket, joinedRoom);
-                //         }
-                //
-                //         socket.emit(ClientListener.JOINED_ROOM, joinedRoom);
-                //
-                //         // broadcast cho nhung user khac de update man hinh cac room
-                //         for (i in users) {
-                //             if (users[i].socket != joinedRoom.playerWhite.socket
-                //                 && users[i].socket != joinedRoom.playerBlack.socket) {
-                //                 emitEventToOtherClient(ClientListener.UPDATE_ROOM,
-                //                     users[i].socket, {
-                //                         roomId: joinedRoom.id,
-                //                         roomStatus: joinedRoom.status
-                //                     });
-                //             }
-                //         }
-                //         break;
-                //     }
-                // }
+                if (!(0, _utility.isEmpty)(room.playerBlack) && !(0, _utility.isEmpty)(room.playerWhite)) {
+                    console.log("ok");
+                    room.status = RoomConstant.Status.PLAYING;
+                    emitEventToOtherClient(ClientListener.JOINED_GAME, room.playerWhite.socket, room);
+                    emitEventToOtherClient(ClientListener.JOINED_GAME, room.playerBlack.socket, room);
+                }
             });
             //
-            // socket.on(ServerListener.READY_TO_PLAY, () => {
-            //     // update status cua client
-            //     user.status = ClientConstant.Status.PLAYING;
-            //
-            //     if (joinedRoom.playerWhite.status == ClientConstant.Status.PLAYING
-            //         && joinedRoom.playerBlack.status == ClientConstant.Status.PLAYING) {
-            //         // neu ca 2 player deu ready thi vao game
-            //         emitEventToOtherClient(ClientListener.JOINED_GAME, joinedRoom.playerWhite.socket, {});
-            //         emitEventToOtherClient(ClientListener.JOINED_GAME, joinedRoom.playerBlack.socket, {});
-            //
-            //         joinedRoom.status = RoomConstant.Status.PLAYING;
-            //         // broadcast cho nhung user khac de update man hinh cac room
-            //         for (i in users) {
-            //             if (users[i].socket != joinedRoom.playerWhite.socket
-            //                 && users[i].socket != joinedRoom.playerBlack.socket) {
-            //                 emitEventToOtherClient(ClientListener.UPDATE_ROOM,
-            //                     users[i].socket, {
-            //                         roomId: joinedRoom.id,
-            //                         roomStatus: joinedRoom.status
-            //                     });
-            //             }
-            //         }
-            //     }
-            // });
-            //
-            // socket.on(ServerListener.TICK, (payload) => {
-            //     joinedRoom.board = payload.board;
-            //
-            //     // xu li logic
-            //     if (finish) {
-            //         // vi du
-            //         emitEventToOtherClient(ClientListener.FINISH, joinedRoom.playerWhite.socket, {
-            //             result: ClientConstant.GameResult.WIN
-            //         });
-            //         emitEventToOtherClient(ClientListener.FINISH, joinedRoom.playerBlack.socket, {
-            //             result: ClientConstant.GameResult.LOSE
-            //         });
-            //     } else {
-            //         emitEventToOtherClient(ClientListener.UPDATE_BOARD, joinedRoom.playerWhite.socket, {
-            //             board: joinedRoom.board
-            //         });
-            //         emitEventToOtherClient(ClientListener.UPDATE_BOARD, joinedRoom.playerBlack.socket, {
-            //             board: joinedRoom.board
-            //         });
-            //     }
-            // });
+            socket.on(ServerListener.TICK, function (board) {
+                if ((0, _utility.isEmpty)(socket.room)) return;
+                var room = socket.room;
+                room.board = board;
+
+                if (room.currentChessman == RoomConstant.Board.Cell.WHITE) {
+                    room.currentChessman = RoomConstant.Board.Cell.BLACK;
+                } else {
+                    if (room.currentChessman == RoomConstant.Board.Cell.BLACK) {
+                        room.currentChessman = RoomConstant.Board.Cell.WHITE;
+                    }
+                }
+
+                emitEventToOtherClient(ClientListener.UPDATE_BOARD, room.playerBlack.socket, room);
+                emitEventToOtherClient(ClientListener.UPDATE_BOARD, room.playerWhite.socket, room);
+
+                // xu li logic
+                // if (finish) {
+                //     // vi du
+                //     emitEventToOtherClient(ClientListener.FINISH, joinedRoom.playerWhite.socket, {
+                //         result: ClientConstant.GameResult.WIN
+                //     });
+                //     emitEventToOtherClient(ClientListener.FINISH, joinedRoom.playerBlack.socket, {
+                //         result: ClientConstant.GameResult.LOSE
+                //     });
+                // } else {
+                //     emitEventToOtherClient(ClientListener.UPDATE_BOARD, joinedRoom.playerWhite.socket, {
+                //         board: joinedRoom.board
+                //     });
+                //     emitEventToOtherClient(ClientListener.UPDATE_BOARD, joinedRoom.playerBlack.socket, {
+                //         board: joinedRoom.board
+                //     });
+                // }
+            });
             //
             // socket.on(ServerListener.LOG_OUT, () => {
             //     if (user.status != ClientConstant.Status.ONLINE &&
@@ -245,16 +186,21 @@ module.exports = {
             //     }
             // });
             socket.on(ServerListener.LOG_OUT, function () {
+                if ((0, _utility.isEmpty)(socket.room) || (0, _utility.isEmpty)(socket.user)) return;
                 var room = socket.room;
+
                 if (room.playerWhite == socket.user) {
                     room.playerWhite = null;
                 }
                 if (room.playerBlack == socket.user) {
                     room.playerBlack = null;
                 }
-                if ((0, _utility.isEmpty)(room.playerWhite) && (0, _utility.isEmpty)(room.playerBlack) && room.status == RoomConstant.Status.FULL) {
+
+                if ((0, _utility.isEmpty)(room.playerWhite) && (0, _utility.isEmpty)(room.playerBlack) && room.status == RoomConstant.Status.PLAYING) {
                     room = refreshRoom(room);
                 }
+
+                io.emit(ClientListener.UPDATE_ROOM, room);
             });
         });
     }
