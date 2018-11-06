@@ -68,7 +68,8 @@ module.exports = {
             socket.on(ServerListener.LOG_IN, function (data) {
                 // doan nay chua biet lam the nao de lay username
                 console.log(data.name);
-                var username = data.name + "_" + uniqid();
+                var id = uniqid();
+                var username = data.name + "_" + id.slice(id.length - 5, id.length);
                 var user = {
                     socket: socket.id,
                     username: username,
