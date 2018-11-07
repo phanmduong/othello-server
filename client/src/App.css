@@ -1,0 +1,178 @@
+@import '~antd/dist/antd.css';
+
+.room {
+    height: 120px;
+    padding-bottom: 24px;
+    cursor: pointer;
+}
+
+.room .room-empty, .room .room-1-user, .room .room-2-user {
+    height: 80%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-empty {
+    background: #e2e2e2;
+}
+
+.room .text {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+.room-empty .text {
+    color: black;
+}
+
+.room-1-user {
+    background: #02a24d;
+}
+
+.room-1-user .text, .room-2-user .text {
+    color: white;
+}
+
+.room-2-user {
+    background: #D28A28;
+    cursor: not-allowed;
+}
+
+.room-name {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.board-game {
+    background: #02a24d;
+    height: 590px;
+    width: 590px;
+    border-radius: 10px;
+    border: solid #813105 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cell-game {
+    border: solid #00a87f 5px;
+    width: 71px;
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell-game.not-allowed-cell{
+    cursor: not-allowed;
+}
+
+.board-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.dot-white {
+    background: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.dot-white {
+    background: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.dot-black {
+
+    background: black;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.hover-black {
+    opacity: 0;
+    background: black;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.hover-white {
+    opacity: 0;
+    background: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.hover-black:hover, .hover-white:hover {
+    opacity: 0.5;
+}
+
+.cell-game > .dot-black, .cell-game > .dot-white {
+    cursor: not-allowed;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+    width: 45px;
+    height: 45px;
+}
+
+.waiting-partner {
+    font-size: 20px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.container-score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-score {
+    display: flex;
+    flex: 1;
+    background: #02a24d;
+    border-radius: 10px;
+    border: solid #813105 20px;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.board-score .name {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.board-score .score {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-left: 25px;
+}
