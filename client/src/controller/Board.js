@@ -201,6 +201,8 @@ class BoardContainer extends Component {
 
 
     checkUpdateBoard = (fences) => {
+        if (this.isFullBoard(store.getCurrentRoom.board)) return;
+
         if (this.timeout != null) {
             clearTimeout(this.timeout);
         }
