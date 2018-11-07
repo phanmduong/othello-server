@@ -7,11 +7,10 @@ var ClientListener = Constant.ClientListener;
 var RoomConstant = Constant.Room;
 var ClientConstant = Constant.Client;
 
-var users = [];
-// khoi tao truoc 20 rooms
+// khoi tao truoc 100 rooms
 var rooms = new Array(100).fill(null).map((value, i) => {
     var room = {
-        id: i,
+        id: i + 1,
         playerWhite: null,
         playerBlack: null,
         board: new Array(RoomConstant.Board.ROW).fill(RoomConstant.Board.Cell.EMPTY).map(() => new Array(RoomConstant.Board.COL).fill(RoomConstant.Board.Cell.EMPTY)),
@@ -43,6 +42,12 @@ function refreshRoom(room) {
         status: RoomConstant.Status.EMPTY,
     };
 
+    var board = roomResult.board;
+    board[3][3] = 2;
+    board[3][4] = 1;
+    board[4][3] = 1;
+    board[4][4] = 2;
+
     rooms = rooms.map((roomData) => {
         if (roomData.id == room.id) {
             return roomResult;
@@ -60,7 +65,6 @@ module.exports = {
                 console.log('new user connected');
                 socket.on(ServerListener.LOG_IN, (data) => {
                     // doan nay chua biet lam the nao de lay username
-                    console.log(data.name);
                     let id = uniqid();
                     let username = data.name + "_" + id.slice(id.length - 5, id.length);
                     let user = {
@@ -71,9 +75,6 @@ module.exports = {
                     };
 
                     socket.user = user;
-
-                    // them user vao danh sach users
-                    users.push(user);
 
                     socket.emit(ClientListener.LOG_IN_SUCCESS, {
                         user: user,
@@ -114,13 +115,12 @@ module.exports = {
                     socket.emit(ClientListener.JOINED_ROOM, room);
 
                     if (!isEmpty(room.playerBlack) && !isEmpty(room.playerWhite)) {
-                        console.log("ok");
                         room.status = RoomConstant.Status.PLAYING;
                         emitEventToOtherClient(ClientListener.JOINED_GAME, room.playerWhite.socket, room);
                         emitEventToOtherClient(ClientListener.JOINED_GAME, room.playerBlack.socket, room);
                     }
                 });
-                //
+
                 socket.on(ServerListener.TICK, (board) => {
                     if (isEmpty(socket.room)) return;
                     let room = socket.room;
@@ -134,73 +134,41 @@ module.exports = {
                         }
                     }
 
-                    emitEventToOtherClient(ClientListener.UPDATE_BOARD, room.playerBlack.socket, room);
-                    emitEventToOtherClient(ClientListener.UPDATE_BOARD, room.playerWhite.socket, room);
-
-                    // xu li logic
-                    // if (finish) {
-                    //     // vi du
-                    //     emitEventToOtherClient(ClientListener.FINISH, joinedRoom.playerWhite.socket, {
-                    //         result: ClientConstant.GameResult.WIN
-                    //     });
-                    //     emitEventToOtherClient(ClientListener.FINISH, joinedRoom.playerBlack.socket, {
-                    //         result: ClientConstant.GameResult.LOSE
-                    //     });
-                    // } else {
-                    //     emitEventToOtherClient(ClientListener.UPDATE_BOARD, joinedRoom.playerWhite.socket, {
-                    //         board: joinedRoom.board
-                    //     });
-                    //     emitEventToOtherClient(ClientListener.UPDATE_BOARD, joinedRoom.playerBlack.socket, {
-                    //         board: joinedRoom.board
-                    //     });
-                    // }
+                    if (!isEmpty(room.playerBlack)) {
+                        emitEventToOtherClient(ClientListener.UPDATE_BOARD, room.playerBlack.socket, room);
+                    }
+                    if (!isEmpty(room.playerWhite)) {
+                        emitEventToOtherClient(ClientListener.UPDATE_BOARD, room.playerWhite.socket, room);
+                    }
                 });
-                //
-                // socket.on(ServerListener.LOG_OUT, () => {
-                //     if (user.status != ClientConstant.Status.ONLINE &&
-                //         (joinedRoom.status == RoomConstant.Status.FULL ||
-                //             joinedRoom.status == RoomConstant.Status.PLAYING)) {
-                //         // tim socket cua doi thu
-                //         let enemySocket = null;
-                //         if (joinedRoom.playerWhite.socket != user.socket) {
-                //             enemySocket = joinedRoom.playerWhite.socket;
-                //         } else {
-                //             enemySocket = joinedRoom.playerBlack.socket;
-                //         }
-                //
-                //         switch (joinedRoom.status) {
-                //             case RoomConstant.Status.FULL:
-                //                 // truong hop chua vao game thi chi can thong bao thoat
-                //                 emitEventToOtherClient(ClientListener.OUT_ROOM, enemySocket, {
-                //                     message: 'your enemy has out room'
-                //                 });
-                //
-                //                 break;
-                //             case RoomConstant.Status.PLAYING:
-                //                 // truong hop thoat khi dang playgame thi xu thang cho doi thu
-                //
-                //                 emitEventToOtherClient(ClientListener.FINISH, enemySocket, {
-                //                     result: ClientConstant.GameResult.WIN
-                //                 });
-                //                 break;
-                //         }
-                //     }
-                // });
+
                 socket.on(ServerListener.LOG_OUT, function () {
                     if (isEmpty(socket.room) || isEmpty(socket.user)) return;
                     let room = socket.room;
+                    let enemySocket = null;
 
                     if (room.playerWhite == socket.user) {
                         room.playerWhite = null;
+                        enemySocket = room.playerBlack ? room.playerBlack.socket : null;
                     }
                     if (room.playerBlack == socket.user) {
                         room.playerBlack = null;
+                        enemySocket = room.playerWhite ? room.playerWhite.socket : null;
+                    }
+
+                    if (room.status != RoomConstant.Status.PLAYING) {
+                        room.status--;
+                    }
+
+                    if (room.status == RoomConstant.Status.PLAYING && enemySocket) {
+                        emitEventToOtherClient(ClientListener.FINISH, enemySocket, {
+                            result: ClientConstant.GameResult.WIN
+                        });
                     }
 
                     if (isEmpty(room.playerWhite) && isEmpty(room.playerBlack) && room.status == RoomConstant.Status.PLAYING) {
                         room = refreshRoom(room);
                     }
-
 
                     io.emit(ClientListener.UPDATE_ROOM, room);
                 })
