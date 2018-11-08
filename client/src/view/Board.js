@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {observer} from "mobx-react";
 import store from "../Store";
 import constant from "../constants";
-import {Modal} from "antd";
+import {Button, Modal} from "antd";
 
 const ClientConstant = constant.Client;
 const RoomConstant = constant.Room;
@@ -19,15 +19,19 @@ class BoardComponent extends Component {
             <Modal
                 title="Kết quả trận đấu"
                 visible={this.props.isFullBoard(store.getCurrentRoom.board) || store.result}
+                // visible={true}
                 footer={null}
                 closable={true}
                 onCancel={this.props.onFinish}
             >
-                <div style={{fontSize: '30px', fontWeight: 'bold'}}>
-                    {
-                        store.result == ClientConstant.GameResult.WIN || this.props.checkWin(store.getCurrentRoom.board) == store.player.chessman ? "Bạn thắng" :
-                            this.props.checkWin(store.getCurrentRoom.board) == store.partner.chessman ? store.partner.name + " thắng" : "Hòa"
-                    }
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                    <div style={{fontSize: '30px', fontWeight: 'bold'}}>
+                        {
+                            store.result == ClientConstant.GameResult.WIN || this.props.checkWin(store.getCurrentRoom.board) == store.player.chessman ? "Bạn thắng" :
+                                this.props.checkWin(store.getCurrentRoom.board) == store.partner.chessman ? store.partner.name + " thắng" : "Hòa"
+                        }
+                    </div>
+                    <Button onClick={this.props.onFinish}>Thoát</Button>
                 </div>
             </Modal>
         )

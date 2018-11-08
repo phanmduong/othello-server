@@ -35,7 +35,7 @@ class ModalFormNameComponent extends Component {
                             type="primary"
                             htmlType="submit"
                         >
-                            Đồng ý
+                            Đăng nhập
                         </FormButton>
                     </div>
                 </Form>
