@@ -1,5 +1,5 @@
 import {isEmpty} from "./helpers/utility";
-import {joinRoom, login, logout} from "./model/user";
+import {finished, joinRoom, login, logout} from "./model/user";
 import {createRooms, refreshRoom, updateBoard} from "./model/room";
 
 var Constant = require('./constant');
@@ -68,6 +68,25 @@ export function startGameServer(io) {
                 }
             });
 
+            socket.on(ServerListener.FINISHED, function () {
+                if (isEmpty(socket.room) || isEmpty(socket.user)) return;
+                let room = socket.room;
+                finished(room, socket.user);
+
+                if (isEmpty(room.playerWhite) && isEmpty(room.playerBlack) && room.status == RoomConstant.Status.PLAYING) {
+                    room = refreshRoom(room);
+
+                    rooms = rooms.map((roomData) => {
+                        if (roomData.id == room.id) {
+                            return room;
+                        }
+                        return roomData;
+                    });
+                }
+
+                io.emit(ClientListener.UPDATE_ROOM, room);
+            });
+
             socket.on(ServerListener.LOG_OUT, function () {
                 if (isEmpty(socket.room) || isEmpty(socket.user)) return;
                 let room = socket.room;
@@ -90,8 +109,8 @@ export function startGameServer(io) {
                     });
 
                 }
-
                 io.emit(ClientListener.UPDATE_ROOM, room);
+
             })
         }
     )

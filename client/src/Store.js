@@ -38,6 +38,7 @@ class Store {
     @action
     setCurrentRoom = (roomData) => {
         this.status = "playing";
+        this.result = null;
         this.currentRoomId = roomData.id;
     };
 

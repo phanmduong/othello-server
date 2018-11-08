@@ -95,7 +95,7 @@ class BoardContainer extends Component {
         return moves;
     }
 
-    evaluateMove = (board, chessman, reverseChessman, x, y, xMove, yMove)=> {
+    evaluateMove = (board, chessman, reverseChessman, x, y, xMove, yMove) => {
         let count = 0;
         let x1 = x + xMove;
         let y1 = y + yMove;
@@ -126,7 +126,7 @@ class BoardContainer extends Component {
 
     }
 
-    reverseCell = (board, chessman, reverseChessman, x, y, xMove, yMove)=> {
+    reverseCell = (board, chessman, reverseChessman, x, y, xMove, yMove) => {
         let x1 = x + xMove;
         let y1 = y + yMove;
         while (true) {
@@ -150,7 +150,7 @@ class BoardContainer extends Component {
         }
     }
 
-    checkWin = (board) =>{
+    checkWin = (board) => {
         let chessmanWhite = 0;
         let chessmanBlack = 0;
         board.forEach((row) => {
@@ -211,7 +211,12 @@ class BoardContainer extends Component {
                 this.updateBoard();
             }
         }, 500);
-    }
+    };
+
+    onFinish = () => {
+        socket.emit(ServerListener.FINISHED);
+        store.status = "choose room";
+    };
 
 
     render() {
@@ -224,6 +229,7 @@ class BoardContainer extends Component {
                 isAvailableMove={this.isAvailableMove}
                 checkUpdateBoard={this.checkUpdateBoard}
                 onClickCell={this.onClickCell}
+                onFinish={this.onFinish}
             />
         )
     }

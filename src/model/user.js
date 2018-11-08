@@ -54,3 +54,12 @@ export function logout(room, user) {
 
     return enemySocket;
 }
+
+export function finished(room, user) {
+    if (room.playerWhite == user) {
+        room.playerWhite = null;
+    }
+    if (room.playerBlack == user) {
+        room.playerBlack = null;
+    }
+}

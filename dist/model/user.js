@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.login = login;
 exports.joinRoom = joinRoom;
 exports.logout = logout;
+exports.finished = finished;
 var Constant = require('../constant');
 var uniqid = require('uniqid');
 var RoomConstant = Constant.Room;
@@ -60,4 +61,13 @@ function logout(room, user) {
     }
 
     return enemySocket;
+}
+
+function finished(room, user) {
+    if (room.playerWhite == user) {
+        room.playerWhite = null;
+    }
+    if (room.playerBlack == user) {
+        room.playerBlack = null;
+    }
 }

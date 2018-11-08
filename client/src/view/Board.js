@@ -21,9 +21,7 @@ class BoardComponent extends Component {
                 visible={this.props.isFullBoard(store.getCurrentRoom.board) || store.result}
                 footer={null}
                 closable={true}
-                onCancel={() => {
-                    window.location.reload();
-                }}
+                onCancel={this.props.onFinish}
             >
                 <div style={{fontSize: '30px', fontWeight: 'bold'}}>
                     {

@@ -6,6 +6,8 @@ export default {
         JOIN_ROOM: 'JOIN_ROOM',
         READY_TO_PLAY: 'READY_TO_PLAY',
         TICK: 'TICK',
+        FINISHED: 'FINISHED',
+
     },
     ClientListener: {
         LOG_IN_SUCCESS: 'LOG_IN_SUCCESS',
@@ -14,7 +16,7 @@ export default {
         UPDATE_ROOM: 'UPDATE_ROOM',
         JOINED_GAME: 'JOINED_GAME',
         UPDATE_BOARD: 'UPDATE_BOARD',
-        FINISH: 'FINISH'
+        FINISH: 'FINISH',
     },
     Room: {
         Board: {

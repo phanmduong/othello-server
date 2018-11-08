@@ -78,6 +78,25 @@ function startGameServer(io) {
             }
         });
 
+        socket.on(ServerListener.FINISHED, function () {
+            if ((0, _utility.isEmpty)(socket.room) || (0, _utility.isEmpty)(socket.user)) return;
+            var room = socket.room;
+            (0, _user.finished)(room, socket.user);
+
+            if ((0, _utility.isEmpty)(room.playerWhite) && (0, _utility.isEmpty)(room.playerBlack) && room.status == RoomConstant.Status.PLAYING) {
+                room = (0, _room.refreshRoom)(room);
+
+                rooms = rooms.map(function (roomData) {
+                    if (roomData.id == room.id) {
+                        return room;
+                    }
+                    return roomData;
+                });
+            }
+
+            io.emit(ClientListener.UPDATE_ROOM, room);
+        });
+
         socket.on(ServerListener.LOG_OUT, function () {
             if ((0, _utility.isEmpty)(socket.room) || (0, _utility.isEmpty)(socket.user)) return;
             var room = socket.room;
@@ -99,7 +118,6 @@ function startGameServer(io) {
                     return roomData;
                 });
             }
-
             io.emit(ClientListener.UPDATE_ROOM, room);
         });
     });

@@ -6,7 +6,8 @@ module.exports = {
         LOG_IN: "LOGIN",
         LOG_OUT: 'disconnect',
         JOIN_ROOM: 'JOIN_ROOM',
-        TICK: 'TICK'
+        TICK: 'TICK',
+        FINISHED: 'FINISHED'
     },
     ClientListener: {
         LOG_IN_SUCCESS: 'LOG_IN_SUCCESS',
