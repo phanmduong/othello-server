@@ -7,7 +7,7 @@ exports.startGameServer = startGameServer;
 
 var _utility = require("./helpers/utility");
 
-var _user = require("./model/user");
+var _client = require("./model/client");
 
 var _room = require("./model/room");
 
@@ -33,25 +33,25 @@ function startGameServer(io) {
 
         console.log('new user connected');
         socket.on(ServerListener.LOG_IN, function (data) {
-            socket.user = (0, _user.login)(socket.id, data.name);
+            socket.clientUser = (0, _client.login)(socket.id, data.name);
 
             socket.emit(ClientListener.LOG_IN_SUCCESS, {
-                user: socket.user,
+                client: socket.clientUser,
                 rooms: rooms
             });
         });
 
         // // neu 1 user bam join vao 1 room thi
         socket.on(ServerListener.JOIN_ROOM, function (data) {
-            if ((0, _utility.isEmpty)(socket.user)) return;
+            if ((0, _utility.isEmpty)(socket.clientUser)) return;
             var roomId = data.roomId;
 
             var room = rooms.filter(function (room) {
                 return room.id == roomId;
             })[0];
-            var user = socket.user;
+            var client = socket.clientUser;
 
-            (0, _user.joinRoom)(user, room);
+            (0, _client.joinRoom)(client, room);
 
             socket.room = room;
             socket.broadcast.emit(ClientListener.UPDATE_ROOM, room);
@@ -79,9 +79,9 @@ function startGameServer(io) {
         });
 
         socket.on(ServerListener.FINISHED, function () {
-            if ((0, _utility.isEmpty)(socket.room) || (0, _utility.isEmpty)(socket.user)) return;
+            if ((0, _utility.isEmpty)(socket.room) || (0, _utility.isEmpty)(socket.clientUser)) return;
             var room = socket.room;
-            (0, _user.finished)(room, socket.user);
+            (0, _room.finished)(room, socket.clientUser);
 
             if ((0, _utility.isEmpty)(room.playerWhite) && (0, _utility.isEmpty)(room.playerBlack) && room.status == RoomConstant.Status.PLAYING) {
                 room = (0, _room.refreshRoom)(room);
@@ -94,13 +94,15 @@ function startGameServer(io) {
                 });
             }
 
+            console.log(room);
+
             io.emit(ClientListener.UPDATE_ROOM, room);
         });
 
         socket.on(ServerListener.LOG_OUT, function () {
-            if ((0, _utility.isEmpty)(socket.room) || (0, _utility.isEmpty)(socket.user)) return;
+            if ((0, _utility.isEmpty)(socket.room) || (0, _utility.isEmpty)(socket.clientUser)) return;
             var room = socket.room;
-            var enemySocket = (0, _user.logout)(room, socket.user);
+            var enemySocket = (0, _client.logout)(room, socket.clientUser);
 
             if (room.status == RoomConstant.Status.PLAYING && enemySocket) {
                 emitEventToOtherClient(ClientListener.FINISH, enemySocket, {

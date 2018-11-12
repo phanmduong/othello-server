@@ -53,4 +53,13 @@ export function updateBoard(room, board) {
     }
 }
 
+export function finished(room, client) {
+    if (room.playerWhite == client) {
+        room.playerWhite = null;
+    }
+    if (room.playerBlack == client) {
+        room.playerBlack = null;
+    }
+}
+
 

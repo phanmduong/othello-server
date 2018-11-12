@@ -1,11 +1,11 @@
 import {observable, action, computed} from "mobx";
 import {isEmpty} from "./helpers/utility";
-import UserStore from "./model/user";
+import ClientStore from "./model/client";
 import RoomStore from "./model/room";
 
 class Store {
     @observable visibleModalName = true;
-    @observable userStore = {};
+    @observable clientStore = {};
     @observable roomsStore = [];
     @observable currentRoomId;
     @observable status = "choose room";
@@ -13,10 +13,10 @@ class Store {
 
 
     @action
-    submitModalName = (data) => {
+    submitUsername = (data) => {
         this.visibleModalName = false;
-        const user = data.user;
-        this.userStore = new UserStore(user.name, user.username, user.socket, user.status, user.chessman);
+        const client = data.client;
+        this.clientStore = new ClientStore(client.name, client.username, client.socket, client.status, client.chessman);
         data.rooms.forEach((room) => {
             this.roomsStore.push(new RoomStore(room.id, room.playerWhite, room.playerBlack, room.status, room.board, room.currentChessman))
         })
@@ -24,6 +24,7 @@ class Store {
 
     @action
     updateRoom = (roomData) => {
+        console.log(roomData);
         this.roomsStore = this.roomsStore.map((room) => {
             if (room.id == roomData.id) {
                 Object.keys(roomData).map((key) => {
@@ -52,16 +53,16 @@ class Store {
         return player.chessman == room.currentChessman;
     }
 
-    @computed get partner() {
+    @computed get opponent() {
         const room = this.getCurrentRoom;
         if (isEmpty(room)) return null;
-        return room.playerBlack && this.userStore.username == room.playerBlack.username ? room.playerWhite : room.playerBlack;
+        return room.playerBlack && this.clientStore.username == room.playerBlack.username ? room.playerWhite : room.playerBlack;
     }
 
     @computed get player() {
         const room = this.getCurrentRoom;
         if (isEmpty(room)) return null;
-        return room.playerWhite && this.userStore.username == room.playerWhite.username ? room.playerWhite : room.playerBlack;
+        return room.playerWhite && this.clientStore.username == room.playerWhite.username ? room.playerWhite : room.playerBlack;
     }
 
 }

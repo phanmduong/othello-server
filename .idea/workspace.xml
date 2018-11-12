@@ -1,7 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cec5e2fe-a7f3-46cf-a405-e4b76ba72e2b" name="Default Changelist" comment="" />
+    <list default="true" id="cec5e2fe-a7f3-46cf-a405-e4b76ba72e2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/jest/cssTransform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/jest/fileTransform.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/paths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/webpack.config.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/webpack.config.prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/config/webpackDevServer.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/othello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/scripts/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/scripts/start.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/scripts/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/controller/Board.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/controller/Drawer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/controller/ListRoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/controller/ModalFormName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpers/entity/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpers/entity/mobx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpers/entity/object.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpers/utility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/model/room.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/model/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/socketio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/Board.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/Drawer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/HOC/generatorFormItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/ListRoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/ModalFormName.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/Form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/FormButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/view/common/FormInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/helpers/utility.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/model/room.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/model/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/othello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/othello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/precache-manifest.96fac6892f39c575b83d3c8c5d0b84fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/othello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/precache-manifest.425137d3e99f195c51ff7970b1bfc1ae.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/precache-manifest.7c304c9d8fa874b9334c915cadfab67f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/precache-manifest.96fac6892f39c575b83d3c8c5d0b84fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/precache-manifest.d9d577069c9c78138893200facc9334f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/precache-manifest.e82fc4d6a350a91894aae6449d026339.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/precache-manifest.f5cd073ff0783bb8baf451c9846b1f6e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/1.73e893b4.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/1.73e893b4.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/1.bd5be7a3.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/1.bd5be7a3.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.228b0946.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.228b0946.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.ae503a60.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.ae503a60.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.b0e42dea.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.b0e42dea.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.f9c3ac0a.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/css/main.f9c3ac0a.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.04421cd3.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.04421cd3.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.12f026e4.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.12f026e4.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.c8c30590.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.c8c30590.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.e825f22f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/1.e825f22f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.3c3481c8.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.3c3481c8.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.42db086c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.42db086c.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.5355be0a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.5355be0a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.5e3a6757.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.5e3a6757.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.828ee133.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.828ee133.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.e3cd1bf5.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/main.e3cd1bf5.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/runtime~main.229c360f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/public/static1/js/runtime~main.229c360f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/css/1.bd5be7a3.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/css/1.bd5be7a3.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/css/main.f9c3ac0a.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/css/main.f9c3ac0a.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/js/1.c8c30590.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/js/main.5355be0a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/js/main.5355be0a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/js/runtime~main.229c360f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/public/static1/js/runtime~main.229c360f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/othello.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/precache-manifest.e82fc4d6a350a91894aae6449d026339.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/css/1.73e893b4.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/css/1.73e893b4.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/css/main.228b0946.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/css/main.228b0946.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/js/1.04421cd3.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/js/1.04421cd3.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/js/main.42db086c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/js/main.42db086c.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/js/runtime~main.229c360f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static1/js/runtime~main.229c360f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/othello.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/othello.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/users.js" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,12 +149,15 @@
     <session id="-747701062">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -28,7 +165,7 @@
           <entry key="babelrc" value="2" />
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="js" value="36" />
+          <entry key="js" value="41" />
           <entry key="json" value="4" />
           <entry key="ts" value="1" />
         </counts>
@@ -36,7 +173,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="36" />
+          <entry key="JavaScript" value="41" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -46,14 +183,14 @@
           <entry key="babelrc" value="36" />
           <entry key="env" value="15" />
           <entry key="gitignore" value="43" />
-          <entry key="js" value="3014" />
+          <entry key="js" value="3029" />
           <entry key="json" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="114" />
-          <entry key="JavaScript" value="3014" />
+          <entry key="JavaScript" value="3029" />
           <entry key="PLAIN_TEXT" value="58" />
         </counts>
       </usages-collector>
@@ -61,24 +198,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/othello.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.babelrc">
           <provider selected="true" editor-type-id="text-editor">
@@ -97,11 +216,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/othello.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="101" column="34" lean-forward="true" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+            <state relative-caret-position="1870">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -110,16 +229,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/view/HOC/generatorFormItem.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/static1/js/1.04421cd3.chunk.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/constant.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -129,10 +238,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/user.js">
+        <entry file="file://$PROJECT_DIR$/src/model/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+            <state relative-caret-position="141">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -140,8 +249,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/room.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-29">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            <state relative-caret-position="402">
+              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1264">
+              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -162,9 +280,16 @@
       <find>ON</find>
       <find>console</find>
       <find>= ''</find>
-      <find>IN_ROOM</find>
       <find>JOINED_GAME</find>
+      <find>IN_ROOM</find>
+      <find>fin</find>
+      <find>.client</find>
+      <find>user</find>
     </findStrings>
+    <replaceStrings>
+      <replace>.clientUser</replace>
+      <replace>client</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -186,11 +311,12 @@
         <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/room.js" />
-        <option value="$PROJECT_DIR$/src/model/room.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/src/controller/Board.js" />
         <option value="$PROJECT_DIR$/src/constant.js" />
         <option value="$PROJECT_DIR$/src/model/user.js" />
+        <option value="$PROJECT_DIR$/src/model/client.js" />
+        <option value="$PROJECT_DIR$/src/model/room.js" />
         <option value="$PROJECT_DIR$/src/othello.js" />
       </list>
     </option>
@@ -202,18 +328,18 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/client/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/client/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-1974" />
+    <option name="y" value="67" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -221,39 +347,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static1" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="othello-server" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="static1" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="1.04421cd3.chunk.js" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="othello-server" type="b2602c69:ProjectViewProjectNode" />
@@ -276,6 +375,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,8 +389,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/client" />
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$/helpers" />
       <recent name="$PROJECT_DIR$" />
@@ -343,18 +443,20 @@
       <workItem from="1541331041677" duration="24982000" />
       <workItem from="1541484242672" duration="3129000" />
       <workItem from="1541559559192" duration="15731000" />
-      <workItem from="1541659528717" duration="2158000" />
+      <workItem from="1541659528717" duration="2862000" />
+      <workItem from="1541669408396" duration="1640000" />
+      <workItem from="1541677721191" duration="9000" />
+      <workItem from="1542012858468" duration="2968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48452000" />
+    <option name="totallyTimeSpent" value="53773000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="-2560" y="-421" width="2560" height="1440" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27554616" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15399763" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -366,7 +468,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29036143" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3729927" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -442,22 +544,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static1/js/1.12f026e4.chunk.js" />
     <entry file="file://$PROJECT_DIR$/src/model/listRoom.js" />
-    <entry file="file://$PROJECT_DIR$/src/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!block;n#normalizePort#0" />
-            <element signature="n#!!block;n#onError#0" />
-            <element signature="n#!!block;n#onListening#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1848">
           <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/controller/Board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/othello.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -475,6 +579,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/constant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/view/HOC/generatorFormItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static1/js/1.04421cd3.chunk.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/model/user.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -482,57 +616,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/controller/Board.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io/lib/socket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="278">
+          <caret line="223" column="14" selection-start-line="223" selection-start-column="14" selection-end-line="223" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/othello.js">
+    <entry file="file://$PROJECT_DIR$/src/model/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/view/HOC/generatorFormItem.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static1/js/1.04421cd3.chunk.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othello.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="101" column="34" lean-forward="true" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="141">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/room.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-29">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        <state relative-caret-position="402">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/user.js">
+    <entry file="file://$PROJECT_DIR$/src/othello.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/constant.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="1870">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

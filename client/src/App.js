@@ -4,10 +4,10 @@ import {observer} from "mobx-react";
 import store from "./Store";
 import {Layout} from 'antd';
 
-import ModalFormNameContainer from "./controller/ModalFormName";
-import DrawerContainer from "./controller/Drawer";
-import ListRoomContainer from "./controller/ListRoom";
-import BoardContainer from "./controller/Board";
+import LoginController from "./controller/LoginController";
+import GameInfoController from "./controller/GameInfoController";
+import ListRoomController from "./controller/ListRoomController";
+import BoardController from "./controller/BoardController";
 
 const {Header, Sider, Content} = Layout;
 
@@ -16,7 +16,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <ModalFormNameContainer/>
+                <LoginController/>
                 <Layout className="layout">
                     <Header>
                         <div style={{color: '#fff', fontSize: '22px', fontWeight: 'bold', textAlign: 'center'}}>
@@ -25,7 +25,7 @@ class App extends Component {
                     </Header>
                     <Layout>
                         <Sider width={200} style={{background: '#fff'}}>
-                            <DrawerContainer/>
+                            <GameInfoController/>
                         </Sider>
                         <Content
                             style={{
@@ -46,7 +46,7 @@ class App extends Component {
                                 alignItems: 'center'
                             }}>
                                 {
-                                    store.status == "choose room" ? <ListRoomContainer/> : <BoardContainer/>
+                                    store.status == "choose room" ? <ListRoomController/> : <BoardController/>
                                 }
                             </div>
                         </Content>

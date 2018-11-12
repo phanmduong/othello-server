@@ -9,6 +9,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 exports.createRooms = createRooms;
 exports.refreshRoom = refreshRoom;
 exports.updateBoard = updateBoard;
+exports.finished = finished;
 var Constant = require('../constant');
 var RoomConstant = Constant.Room;
 
@@ -61,5 +62,14 @@ function updateBoard(room, board) {
         if (room.currentChessman == RoomConstant.Board.Cell.BLACK) {
             room.currentChessman = RoomConstant.Board.Cell.WHITE;
         }
+    }
+}
+
+function finished(room, client) {
+    if (room.playerWhite == client) {
+        room.playerWhite = null;
+    }
+    if (room.playerBlack == client) {
+        room.playerBlack = null;
     }
 }
